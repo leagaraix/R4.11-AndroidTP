@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Exercice2Activity"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/questionQCM" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/exercice2_bonne_reponse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice2_bonne_reponse" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice2_match_nul" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice2_etudiants" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/exercice2_valider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/exercice2_valider" />
+
+    <TextView
+        android:id="@+id/exercice2_reponse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exercice2_reponse" />
+
+</LinearLayout>
