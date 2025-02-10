@@ -6,15 +6,27 @@
     <string name="exercice3">Exercice 3</string>
     <string name="exercice4">Exercice 4</string>
     <string name="exercice5">Exercice 5</string>
+
     <string name="exercice1_text">Ecrire votre prénom et valider</string>
     <string name="exercice1_valider">Valider</string>
     <string name="exercice1_print">Hello World !</string>
     <string name="questionQCM">Quelle a été la différence de buts lors du match de football opposant l\'équipe enseignante du département à l\'équipe étudiante ?</string>
+
     <string name="exercice2_bonne_reponse">+ 10 pour les enseignants</string>
     <string name="exercice2_match_nul">0 Match Nul</string>
     <string name="exercice2_etudiants">+ 1 pour les étudiants</string>
     <string name="exercice2_valider">VALIDER MA REPONSE</string>
     <string name="exercice2_reponse">Choisir une réponse puis valider</string>
+
     <string name="exercice3_main_ordinateur">Main de l\'ordinateur</string>
-    <string name="exercice3_resultat">Test, texte à supprimer</string>
+    <string name="exercice3_main_joueur">Choisir une main :</string>
+    <string name="exercice3_jouer">À vous de jouer !</string>
+    <string name="exercice3_victoire">Victoire !</string>
+    <string name="exercice3_defaite">Défaite !</string>
+    <string name="exercice3_nombre_victoires">"Nombre de victoires : "</string>
+    <string name="exercice3_nombre_defaites">"Nombre de défaites : "</string>
+    <string name="exercice3_nombre_egalites">"Nombre d'égalités : "</string>
+    <string name="exercice3_nombre_victoires_chiffre">0</string>
+    <string name="exercice3_nombre_defaites_chiffre">0</string>
+    <string name="exercice3_nombre_egalites_chiffre">0</string>
 </resources>

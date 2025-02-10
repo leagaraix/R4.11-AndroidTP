@@ -40,7 +40,7 @@ public class Jeu {
 	}
 
 	/**
-	 *  Retourne vrai la main du joueur et la même que la main de l'ordinateur
+	 *  Retourne vrai la main du joueur est la même que la main de l'ordinateur
 	 *
 	 */
 	public boolean egalite() {

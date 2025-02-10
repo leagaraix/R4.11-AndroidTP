@@ -27,8 +27,6 @@ public class Exercice2Activity extends AppCompatActivity {
         valider = findViewById(R.id.exercice2_valider); // Bouton de validation
         texte = findViewById(R.id.exercice2_reponse); // Texte à mettre à jour selon la réponse
 
-        // Association des événements
-
         // Affichage de la réponse
         valider.setOnClickListener(new View.OnClickListener() {
             @Override

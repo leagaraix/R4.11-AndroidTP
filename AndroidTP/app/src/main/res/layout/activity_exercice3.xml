@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <!-- Plateau de l'ordinateur -->
     <LinearLayout
         android:id="@+id/exercice3_plateau_ordinateur"
         android:layout_width="wrap_content"
@@ -16,7 +17,7 @@
         android:gravity="center">
 
         <TextView
-            android:id="@+id/exercice3_ordinateur"
+            android:id="@+id/exercice3_main_ordinateur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/exercice3_main_ordinateur"/>
@@ -29,69 +30,135 @@
                 android:id="@+id/ordinateur_papier"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/papier"/>
+                android:src="@drawable/papier"
+                android:visibility="invisible"
+                android:background="@color/black"
+                android:padding="2dp"/>
 
             <ImageView
                 android:id="@+id/ordinateur_caillou"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/caillou"/>
+                android:src="@drawable/caillou"
+                android:visibility="invisible"
+                android:background="@color/black"
+                android:padding="2dp"/>
 
             <ImageView
                 android:id="@+id/ordinateur_ciseaux"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ciseaux"/>
+                android:src="@drawable/ciseaux"
+                android:visibility="invisible"
+                android:background="@color/black"
+                android:padding="2dp"/>
+
         </LinearLayout>
     </LinearLayout>
 
+    <!-- Victoire ou défaite -->
     <TextView
         android:id="@+id/exercice3_resultat"
         android:layout_below="@+id/exercice3_plateau_ordinateur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exercice3_resultat"/>
+        android:text="@string/exercice3_jouer"/>
 
-    <TextView
-        android:id="@+id/exercice3_joueur"
+    <!-- Plateau du joueur -->
+    <LinearLayout
+        android:id="@+id/exercice3_plateau_joueur"
         android:layout_below="@+id/exercice3_resultat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exercice3_main_ordinateur"/>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/exercice3_joueur">
-
-    <LinearLayout
-        android:id="@+id/exercice3_plateau_joueur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" <!--BLALALALAALALLA ICIIIIIIIIIIIIII -->
+        android:orientation="vertical"
         android:gravity="center">
 
-            <ImageView
-                android:id="@+id/joueur_papier"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/papier"/>
+        <TextView
+            android:id="@+id/exercice3_joueur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice3_main_joueur"/>
 
-            <ImageView
-                android:id="@+id/joueur_caillou"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/caillou"/>
+                android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/joueur_ciseaux"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ciseaux"/>
+                <ImageView
+                    android:id="@+id/joueur_papier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/papier"
+                    android:background="@color/black"
+                    android:padding="2dp"/>
 
-        </LinearLayout>
+                <ImageView
+                    android:id="@+id/joueur_caillou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/caillou"
+                    android:background="@color/black"
+                    android:padding="2dp"/>
+
+                <ImageView
+                    android:id="@+id/joueur_ciseaux"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ciseaux"
+                    android:background="@color/black"
+                    android:padding="2dp"/>
+
+            </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exercice3_plateau_joueur"
+        android:orientation="vertical"
+        >
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_victoires"/>
+            <TextView
+                android:id="@+id/exercice3_nombre_victoires"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_victoires_chiffre"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_defaites"/>
+            <TextView
+                android:id="@+id/exercice3_nombre_defaites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_defaites_chiffre"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_egalites"/>
+            <TextView
+                android:id="@+id/exercice3_nombre_egalites"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exercice3_nombre_egalites_chiffre"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
