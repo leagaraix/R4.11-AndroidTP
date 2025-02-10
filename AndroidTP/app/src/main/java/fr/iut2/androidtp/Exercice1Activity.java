@@ -35,15 +35,10 @@ public class Exercice1Activity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!TextUtils.isEmpty(prenomView.getText())) {
                     helloView.setText("Hello " + prenomView.getText() + " !");
-                    miseAJourGraphique();
                 }
             }
         });
 
-    }
-
-    private void miseAJourGraphique() {
-        helloView.setText(String.valueOf(helloView));
     }
 
 }

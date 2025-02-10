@@ -1,6 +1,7 @@
 package fr.iut2.androidtp;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.TextView;
@@ -28,7 +29,20 @@ public class Exercice2Activity extends AppCompatActivity {
 
         // Association des événements
 
-        // ! J'en suis ici
+        // Affichage de la réponse
+        valider.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Si l'utilisateur a la bonne réponse
+                if (bonneReponse.isChecked()) {
+                    texte.setText("Bravo, vous avez la bonne réponse !");
+                } else {
+                    texte.setText("Ce n'est pas la bonne réponse :(");
+                }
+            }
+        });
 
     }
+
 }
+

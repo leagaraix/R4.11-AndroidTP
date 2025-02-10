@@ -15,4 +15,6 @@
     <string name="exercice2_etudiants">+ 1 pour les étudiants</string>
     <string name="exercice2_valider">VALIDER MA REPONSE</string>
     <string name="exercice2_reponse">Choisir une réponse puis valider</string>
+    <string name="exercice3_main_ordinateur">Main de l\'ordinateur</string>
+    <string name="exercice3_resultat">Test, texte à supprimer</string>
 </resources>

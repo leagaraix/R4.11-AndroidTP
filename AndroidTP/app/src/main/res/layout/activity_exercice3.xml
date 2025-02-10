@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Exercice3Activity">
+    tools:context=".Exercice3Activity"
+    android:orientation="vertical"
+    android:gravity="center">
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/exercice3_plateau_ordinateur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/exercice3_ordinateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice3_main_ordinateur"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ordinateur_papier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/papier"/>
+
+            <ImageView
+                android:id="@+id/ordinateur_caillou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caillou"/>
+
+            <ImageView
+                android:id="@+id/ordinateur_ciseaux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ciseaux"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/exercice3_resultat"
+        android:layout_below="@+id/exercice3_plateau_ordinateur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercice3_resultat"/>
+
+    <TextView
+        android:id="@+id/exercice3_joueur"
+        android:layout_below="@+id/exercice3_resultat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exercice3_main_ordinateur"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/exercice3_joueur">
+
+    <LinearLayout
+        android:id="@+id/exercice3_plateau_joueur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" <!--BLALALALAALALLA ICIIIIIIIIIIIIII -->
+        android:gravity="center">
+
+            <ImageView
+                android:id="@+id/joueur_papier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/papier"/>
+
+            <ImageView
+                android:id="@+id/joueur_caillou"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/caillou"/>
+
+            <ImageView
+                android:id="@+id/joueur_ciseaux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ciseaux"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
