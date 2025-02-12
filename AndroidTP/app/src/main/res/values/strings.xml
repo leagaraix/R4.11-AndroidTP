@@ -23,6 +23,7 @@
     <string name="exercice3_jouer">À vous de jouer !</string>
     <string name="exercice3_victoire">Victoire !</string>
     <string name="exercice3_defaite">Défaite !</string>
+    <string name="exercice3_egalite">Egalité !</string>
     <string name="exercice3_nombre_victoires">"Nombre de victoires : "</string>
     <string name="exercice3_nombre_defaites">"Nombre de défaites : "</string>
     <string name="exercice3_nombre_egalites">"Nombre d'égalités : "</string>

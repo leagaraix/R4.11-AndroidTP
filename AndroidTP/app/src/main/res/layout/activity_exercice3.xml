@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".Exercice3Activity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    >
 
     <!-- Plateau de l'ordinateur -->
     <LinearLayout
@@ -20,11 +21,13 @@
             android:id="@+id/exercice3_main_ordinateur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exercice3_main_ordinateur"/>
+            android:text="@string/exercice3_main_ordinateur"
+            android:textSize="@dimen/texte_moyen"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:id="@+id/ordinateur_papier"
@@ -32,8 +35,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/papier"
                 android:visibility="invisible"
-                android:background="@color/black"
-                android:padding="2dp"/>
+                android:background="@color/green"
+                android:padding="3dp"/>
 
             <ImageView
                 android:id="@+id/ordinateur_caillou"
@@ -41,8 +44,8 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/caillou"
                 android:visibility="invisible"
-                android:background="@color/black"
-                android:padding="2dp"/>
+                android:background="@color/green"
+                android:padding="3dp"/>
 
             <ImageView
                 android:id="@+id/ordinateur_ciseaux"
@@ -50,38 +53,42 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/ciseaux"
                 android:visibility="invisible"
-                android:background="@color/black"
-                android:padding="2dp"/>
+                android:background="@color/green"
+                android:padding="3dp"/>
 
         </LinearLayout>
     </LinearLayout>
 
-    <!-- Victoire ou défaite -->
-    <TextView
-        android:id="@+id/exercice3_resultat"
-        android:layout_below="@+id/exercice3_plateau_ordinateur"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/exercice3_jouer"/>
-
     <!-- Plateau du joueur -->
     <LinearLayout
         android:id="@+id/exercice3_plateau_joueur"
-        android:layout_below="@+id/exercice3_resultat"
+        android:layout_below="@+id/exercice3_plateau_ordinateur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center">
 
+        <!-- Victoire, défaite ou égalité -->
+        <TextView
+            android:id="@+id/exercice3_resultat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/exercice3_jouer"
+            android:textSize="@dimen/texte_grand"
+            android:layout_marginTop="10dp"/>
+
         <TextView
             android:id="@+id/exercice3_joueur"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exercice3_main_joueur"/>
+            android:text="@string/exercice3_main_joueur"
+            android:textSize="@dimen/texte_moyen"
+            android:layout_marginTop="10dp"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
 
                 <ImageView
                     android:id="@+id/joueur_papier"
@@ -89,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/papier"
                     android:background="@color/black"
-                    android:padding="2dp"/>
+                    android:padding="3dp"/>
 
                 <ImageView
                     android:id="@+id/joueur_caillou"
@@ -97,7 +104,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/caillou"
                     android:background="@color/black"
-                    android:padding="2dp"/>
+                    android:padding="3dp"/>
 
                 <ImageView
                     android:id="@+id/joueur_ciseaux"
@@ -105,16 +112,17 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/ciseaux"
                     android:background="@color/black"
-                    android:padding="2dp"/>
+                    android:padding="3dp"/>
 
             </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
+        android:layout_below="@id/exercice3_plateau_joueur"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/exercice3_plateau_joueur"
         android:orientation="vertical"
+        android:layout_marginTop="8dp"
         >
 
         <LinearLayout
