@@ -31,7 +31,8 @@
     <string name="exercice3_nombre_defaites_chiffre">0</string>
     <string name="exercice3_nombre_egalites_chiffre">0</string>
 
-    <string name="exercice4_consigne">Ecris ton prénom</string>
+    <string name="exercice4_instructions">Ecris ton prénom :</string>
+    <string name="exercice4_nouvelles_instructions">Nouveau prénom :</string>
     <string name="exercice4_valider">Valider</string>
     <string name="exercice4_changer_prenom">CHANGER DE PRENOM</string>
     <string name="exercice4_changer_exercice">CHOISIR UN AUTRE EXERCICE</string>

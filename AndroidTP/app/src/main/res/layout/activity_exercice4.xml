@@ -9,9 +9,10 @@
     android:gravity="center">
 
     <TextView
+        android:id="@+id/exercice4_instructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exercice4_consigne"
+        android:text="@string/exercice4_instructions"
         android:textSize="@dimen/texte_grand"/>
 
     <EditText
