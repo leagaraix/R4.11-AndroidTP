@@ -36,5 +36,8 @@
     <string name="exercice4_valider">Valider</string>
     <string name="exercice4_changer_prenom">CHANGER DE PRENOM</string>
     <string name="exercice4_changer_exercice">CHOISIR UN AUTRE EXERCICE</string>
-    <string name="exercice4_hello_texte">Hello %1$s !!!</string>>
+    <string name="exercice4_hello_texte">Hello %1$s !!!</string>
+
+    <string name="exercice5_choix_table">Choisis ta table de multiplication :</string>
+    <string name="exercice5_multiplication">"%2$d x %2$d = "</string>
 </resources>

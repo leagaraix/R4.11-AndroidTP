@@ -41,6 +41,7 @@ public class Exercice4Activity extends AppCompatActivity implements View.OnClick
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
                             instructions.setText(getResources().getString(R.string.exercice4_nouvelles_instructions));
+                            entreePrenom.getText().clear();
                         }
                     }
                 }

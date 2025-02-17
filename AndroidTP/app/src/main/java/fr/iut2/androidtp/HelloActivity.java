@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -45,25 +47,29 @@ public class HelloActivity extends AppCompatActivity implements View.OnClickList
         changerPrenom.setOnClickListener(this);
         changerExercice.setOnClickListener(this);
 
+        // En cas de clic sur le bouton retour
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Toast.makeText(HelloActivity.this, "Bouton back", Toast.LENGTH_SHORT).show();
+                finish();
+            }
+        });
+
     }
 
     @Override
     public void onClick(View view) {
 
-        switch (view.getId()) {
-
-            case R.id.exercice4_changer_prenom:
-                Intent retourChangementPrenom = new Intent();
-                setResult(RESULT_OK, retourChangementPrenom);
-                finish();
-                break;
-
-            case R.id.exercice4_changer_exercice:
-                // Demande d'intention pour l'activité MainActivity
-                Intent intent = new Intent(HelloActivity.this, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-                break;
+        if(view.getId() == R.id.exercice4_changer_prenom) {
+            Intent retourChangementPrenom = new Intent();
+            setResult(RESULT_OK, retourChangementPrenom);
+            finish();
+        } else if (view.getId() == R.id.exercice4_changer_exercice) {
+            // Demande d'intention pour l'activité MainActivity
+            Intent retourChangementExercice = new Intent(HelloActivity.this, MainActivity.class);
+            retourChangementExercice.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(retourChangementExercice);
         }
     }
 }
