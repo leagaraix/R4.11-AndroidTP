@@ -39,5 +39,11 @@
     <string name="exercice4_hello_texte">Hello %1$s !!!</string>
 
     <string name="exercice5_choix_table">Choisis ta table de multiplication :</string>
-    <string name="exercice5_multiplication">"%2$d x %2$d = "</string>
+    <string name="exercice5_multiplication">"%1$d x %2$d = "</string>
+    <string name="exercice5_erreurs">ERREUR(S) !</string>
+    <string name="exercice5_corriger_reponses">Corriger mes réponses</string>
+    <string name="exercice5_choisir_autre_table">Choisir une autre table</string>
+    <string name="exercice5_nombre_erreurs">Nombre d\'erreurs : %1$d</string>
+    <string name="exercice5_felicitations">FELICITATIONS !</string>
+    <string name="exercice5_choisir_autre_exercice">Choisir un autre exercice</string>
 </resources>

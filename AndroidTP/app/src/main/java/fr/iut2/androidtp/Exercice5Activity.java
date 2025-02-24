@@ -41,9 +41,6 @@ public class Exercice5Activity extends AppCompatActivity implements View.OnClick
         // Création de l'intention
         Intent exercice5ActivityIntent = new Intent(Exercice5Activity.this, TableMultiplicationActivity.class);
 
-        // DEBUG, A SUPPRIMER -> valeur de numberPicker est bien prise en compte correctement
-        // int debugNP = numberPicker.getValue();
-
         // Passage de données
         exercice5ActivityIntent.putExtra(TableMultiplicationActivity.KEY_NOMBRE_CHOISI, numberPicker.getValue());
 

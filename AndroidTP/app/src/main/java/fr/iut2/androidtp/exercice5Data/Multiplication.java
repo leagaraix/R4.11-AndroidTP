@@ -24,7 +24,8 @@ public class Multiplication {
     private void setX(int x) { this.x = x; }
     private void setY(int y) { this.y = y; }
     private void setResultat(int x, int y) { this.resultat = x * y; }
-    // Ajouter un setter pour reponseJoueur ?
+
+    public void setReponseJoueur(int reponse) { this.reponseJoueur = reponse; }
 
     // Getters
     public int getX() { return x; }
@@ -35,8 +36,8 @@ public class Multiplication {
     // Méthodes
 
     // Vérifier la réponse de l'utilisateur
-    public boolean reponseJuste(int reponse) {
-        return reponse == resultat; // Utiliser reponseJoueur
+    public boolean reponseJuste() {
+        return reponseJoueur == resultat;
     }
 
 }

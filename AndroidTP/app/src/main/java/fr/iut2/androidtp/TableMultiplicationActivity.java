@@ -26,6 +26,8 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
 
     private Button valider;
     private LinearLayout conteneurLignes;
+    private TableDeMultiplication tableDeMultiplication;
+    private ArrayList<EditText> editTexts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,7 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
 
         // Générer la table de multiplication
         int nombreChoisi = getIntent().getIntExtra(KEY_NOMBRE_CHOISI, 1);
-        TableDeMultiplication tableDeMultiplication = new TableDeMultiplication(nombreChoisi);
+        tableDeMultiplication = new TableDeMultiplication(nombreChoisi);
         ArrayList<Multiplication> table = tableDeMultiplication.getTable();
 
         // INFLATER DYNAMIQUEMENT LES LIGNES
@@ -49,7 +51,10 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
             // Remplir les valeurs
             TextView operation = ligneView.findViewById(R.id.exercice5_ligne_multiplication);
             EditText reponse = ligneView.findViewById(R.id.exercice5_reponse);
-            operation.setText(getResources().getString(R.string.exercice5_multiplication, multiplication.getX(), multiplication.getY()));
+            operation.setText(getResources().getString(R.string.exercice5_multiplication, multiplication.getY(), multiplication.getX()));
+
+            // Enregistrer l'EditText dans une liste pour facilement récupérer sa valeur plus tard
+            editTexts.add(reponse);
 
             // Ajouter la ligne
             conteneurLignes.addView(ligneView);
@@ -61,11 +66,34 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
 
     @Override
     public void onClick(View view) {
+
+        // Quand on clique sur le bouton VALIDER, je veux :
+        // - que les réponses du joueur soient enregistrées dans la table
+        // - appeler la prochaine activité selon les résultats du joueur
+
+
+        // Récupérer la table
+        ArrayList<Multiplication> table = tableDeMultiplication.getTable();
+
+        // Pour chaque EditText de la liste, récupérer sa valeur et l'enregistrer dans les multiplications
+        for (int i = 0 ; i < editTexts.size() ; i++) {
+
+            // AAAAAAAH IL FAUT FINIR CAAAAAAA
+            // LALALALALALALALAAAAAAAAAAAAAAAAAAA
+            int reponse = editTexts.get(i).getText().toString();
+
+        }
+
+
+
         // Vérifier les réponses
+        int nbErreurs = 0;
+
 
         // Si elles sont justes
         // Création de l'intention "Felicitations"
 
-        //
+        // Si elles sont fausses
+        // Création de l'intention "Erreurs"
     }
 }
