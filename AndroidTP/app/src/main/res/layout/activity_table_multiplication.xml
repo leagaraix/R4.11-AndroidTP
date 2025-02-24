@@ -8,6 +8,22 @@
     android:orientation="vertical"
     android:gravity="center">
 
+    <!-- Ajout d'un scrollview, pour scroller s'il y a trop de multiplications -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Conteneur LinearLayout pour insérer les lignes dynamiques de multiplication -->
+        <LinearLayout
+            android:id="@+id/exercice5_lignes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"/>
+
+    </ScrollView>
+
     <Button
         android:id="@+id/exercice5_valider_reponses"
         android:layout_width="wrap_content"

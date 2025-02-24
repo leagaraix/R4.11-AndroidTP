@@ -24,7 +24,7 @@ public class Exercice5Activity extends AppCompatActivity implements View.OnClick
 
         // Récupération des vues
         numberPicker = findViewById(R.id.exercice5_number_picker);
-        valider = findViewById(R.id.exercice5_valider_choix_chiffre)
+        valider = findViewById(R.id.exercice5_valider_choix_chiffre);
 
         // Choisir les valeurs min et max du NumberPicker
         numberPicker.setMinValue(Multiplication.MIN);
@@ -41,8 +41,11 @@ public class Exercice5Activity extends AppCompatActivity implements View.OnClick
         // Création de l'intention
         Intent exercice5ActivityIntent = new Intent(Exercice5Activity.this, TableMultiplicationActivity.class);
 
+        // DEBUG, A SUPPRIMER -> valeur de numberPicker est bien prise en compte correctement
+        // int debugNP = numberPicker.getValue();
+
         // Passage de données
-        exercice5ActivityIntent.putExtra()
+        exercice5ActivityIntent.putExtra(TableMultiplicationActivity.KEY_NOMBRE_CHOISI, numberPicker.getValue());
 
         // Lancement de la demande de changement d'activité
         startActivity(exercice5ActivityIntent);

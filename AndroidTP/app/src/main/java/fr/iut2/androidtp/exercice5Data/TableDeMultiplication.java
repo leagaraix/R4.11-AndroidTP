@@ -1,11 +1,11 @@
 package fr.iut2.androidtp.exercice5Data;
 
-import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 /* Une TableDeMultiplication est composée d'un tableau de Multiplication*/
 public class TableDeMultiplication {
 
-    private Multiplication[] table;
+    private ArrayList<Multiplication> table = new ArrayList<>();
 
     public TableDeMultiplication(int chiffreChoisi) {
         setTable(chiffreChoisi);
@@ -14,12 +14,12 @@ public class TableDeMultiplication {
     // Setter
     public void setTable(int chiffreChoisi) {
         for (int i = 1 ; i <= Multiplication.MAX ; i++) {
-            this.table[i - 1] = new Multiplication(i, chiffreChoisi);
+            table.add(new Multiplication(i, chiffreChoisi));
         }
     }
 
     // Getter
-    public Multiplication[] getTable() {
+    public ArrayList<Multiplication> getTable() {
         return table;
     }
 

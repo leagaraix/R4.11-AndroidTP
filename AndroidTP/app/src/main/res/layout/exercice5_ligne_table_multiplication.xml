@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="30sp"
+    android:layout_height="wrap_content"
     android:layout_marginTop="5sp"
     android:layout_marginBottom="5sp"
     tools:context=".Exercice5Activity"
@@ -11,18 +11,19 @@
     android:gravity="center">
 
     <TextView
-        android:id="@+id/exercice5_multiplication1"
+        android:id="@+id/exercice5_ligne_multiplication"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/exercice5_multiplication"
         android:textSize="@dimen/texte_grand"/>
 
     <EditText
-        android:id="@+id/exercice5_guess1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:id="@+id/exercice5_reponse"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
         android:inputType="number"
-        android:textSize="@dimen/texte_grand"
+        android:textSize="20sp"
+        android:textAlignment="center"
         android:hint="\?"/>
 
 </LinearLayout>
