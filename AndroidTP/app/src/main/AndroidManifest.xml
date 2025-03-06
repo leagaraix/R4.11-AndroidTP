@@ -12,10 +12,10 @@
         android:theme="@style/Theme.AndroidTP"
         tools:targetApi="31">
         <activity
-            android:name=".FelicitationActivity"
+            android:name=".FelicitationsActivity"
             android:exported="false" />
         <activity
-            android:name=".ErreurActivity"
+            android:name=".ErreursActivity"
             android:exported="false" />
         <activity
             android:name=".TableMultiplicationActivity"

@@ -1,5 +1,6 @@
 package fr.iut2.androidtp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,11 +9,12 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContract;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,19 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
     private LinearLayout conteneurLignes;
     private TableDeMultiplication tableDeMultiplication;
     private ArrayList<EditText> editTexts;
+
+    // Attendre le résultat s'il y a des erreurs
+    ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult o) {
+
+                    // QUE FAIT-ON AVEC LE RESULTAT DE L'ACTIVITE ?
+
+                }
+            }
+    );
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +60,7 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
 
         // INFLATER DYNAMIQUEMENT LES LIGNES
         LayoutInflater inflater = LayoutInflater.from(this);
+        editTexts = new ArrayList<>();
         for (Multiplication multiplication : table) {
             View ligneView = inflater.inflate(R.layout.exercice5_ligne_table_multiplication, conteneurLignes, false);
 
@@ -54,7 +70,7 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
             operation.setText(getResources().getString(R.string.exercice5_multiplication, multiplication.getY(), multiplication.getX()));
 
             // Enregistrer l'EditText dans une liste pour facilement récupérer sa valeur plus tard
-            editTexts.add(reponse);
+            editTexts.add(reponse); // TOI
 
             // Ajouter la ligne
             conteneurLignes.addView(ligneView);
@@ -75,25 +91,32 @@ public class TableMultiplicationActivity extends AppCompatActivity implements Vi
         // Récupérer la table
         ArrayList<Multiplication> table = tableDeMultiplication.getTable();
 
-        // Pour chaque EditText de la liste, récupérer sa valeur et l'enregistrer dans les multiplications
+        // Pour chaque EditText de la liste, récupérer sa valeur et l'enregistrer dans la multiplication correspondante
         for (int i = 0 ; i < editTexts.size() ; i++) {
+            String reponse = editTexts.get(i).getText().toString();
+            table.get(i).setReponseJoueur(Integer.parseInt(reponse));
+        }
 
-            // AAAAAAAH IL FAUT FINIR CAAAAAAA
-            // LALALALALALALALAAAAAAAAAAAAAAAAAAA
-            int reponse = editTexts.get(i).getText().toString();
+        // Vérifier les réponses
+        int nbErreurs = tableDeMultiplication.getNbErreurs();
+
+
+        if (nbErreurs == 0) {
+            // Si elles sont toutes justes (nbErreurs == 0)
+            // Création de l'intention "Felicitations"
+
+            Intent felicitationsIntent = new Intent(TableMultiplicationActivity.this, FelicitationsActivity.class);
+            startActivity(felicitationsIntent);
+
+        } else {
+            // Si elles sont fausses (nbErreurs > 0)
+            // Création de l'intention "Erreurs"
+
+            Intent erreursIntent = new Intent(TableMultiplicationActivity.this, ErreursActivity.class);
+            erreursIntent.putExtra(ErreursActivity.KEY_NB_ERREURS, nbErreurs);
+            activityResultLauncher.launch(erreursIntent);
 
         }
 
-
-
-        // Vérifier les réponses
-        int nbErreurs = 0;
-
-
-        // Si elles sont justes
-        // Création de l'intention "Felicitations"
-
-        // Si elles sont fausses
-        // Création de l'intention "Erreurs"
     }
 }

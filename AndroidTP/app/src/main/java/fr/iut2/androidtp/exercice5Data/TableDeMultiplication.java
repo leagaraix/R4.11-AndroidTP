@@ -23,4 +23,17 @@ public class TableDeMultiplication {
         return table;
     }
 
+    // Méthodes
+
+    // Vérifier toutes les réponses de l'utilisateur
+    public int getNbErreurs() {
+        int nbErreurs = 0;
+        for (Multiplication multiplication : table) {
+            if (multiplication.reponseJuste()) {
+                nbErreurs++;
+            }
+        }
+        return nbErreurs;
+    }
+
 }

@@ -5,7 +5,7 @@ public class Multiplication {
 
     // Constantes de classe
     public static final int MIN = 1;
-    public static final int MAX = 10;
+    public static final int MAX = 3;
 
     // Attributs
     private int x;
@@ -35,9 +35,9 @@ public class Multiplication {
 
     // Méthodes
 
-    // Vérifier la réponse de l'utilisateur
+    // Vérifier une réponse de l'utilisateur
     public boolean reponseJuste() {
-        return reponseJoueur == resultat;
+        return reponseJoueur != resultat;
     }
 
 }
