@@ -46,4 +46,8 @@
     <string name="exercice5_nombre_erreurs">Nombre d\'erreurs : %1$d</string>
     <string name="exercice5_felicitations">FELICITATIONS !</string>
     <string name="exercice5_choisir_autre_exercice">Choisir un autre exercice</string>
+    <string name="button_add_user">Ajouter</string>
+    <string name="hint_prenom_user">Prénom</string>
+    <string name="hint_nom_user">Nom</string>
+    <string name="button_add">Ajouter un utilisateur</string>
 </resources>
