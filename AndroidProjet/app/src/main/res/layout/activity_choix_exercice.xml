@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChoixExercice"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_margin="16dp">
+
+    <!-- TODO : ajouter un bouton ? texte ? cliquable permettant de revenir au choix de compte -->
+
+    <TextView
+        android:id="@+id/choixExercice_textView_bonjour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choixExercice_textView_bonjour"
+        android:layout_gravity="center"
+        android:textSize="26sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/choixExercice_text_choixExercice"
+        android:layout_gravity="center"
+        android:textSize="26sp"/>
+
+    <!-- TODO : ajouter une ScrollView autour des boutons si trop d'exercices sont proposés -->
+
+    <Button
+        android:id="@+id/choixExercice_button_additions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choixExercice_button_additions"
+        android:textSize="28sp"/>
+
+    <Button
+        android:id="@+id/choixExercice_button_soustractions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choixExercice_button_soustractions"
+        android:textSize="28sp"/>
+
+    <Button
+        android:id="@+id/choixExercice_button_multiplications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choixExercice_button_multiplications"
+        android:textSize="28sp"/>
+
+    <Button
+        android:id="@+id/choixExercice_button_divisions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/choixExercice_button_divisions"
+        android:textSize="28sp"/>
+
+</LinearLayout>

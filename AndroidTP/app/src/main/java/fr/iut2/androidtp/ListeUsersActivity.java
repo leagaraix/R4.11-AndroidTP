@@ -53,8 +53,8 @@ public class ListeUsersActivity extends AppCompatActivity {
         });
 
 
-
         // J'EN SUIS ICI, A VOIR CE QU'IL FAUT FAIRE AVEC LES EXEMPLES
+        // Exemples présents dans MainActivity du projet TodoList
 
 
 

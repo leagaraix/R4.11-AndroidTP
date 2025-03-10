@@ -13,6 +13,12 @@
         android:theme="@style/Theme.AndroidProjet"
         tools:targetApi="31">
         <activity
+            android:name=".Consignes"
+            android:exported="false" />
+        <activity
+            android:name=".ChoixExercice"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

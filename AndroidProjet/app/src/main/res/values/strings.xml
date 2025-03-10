@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AndroidProjet</string>
+
+    <!-- Textes génériques -->
+    <string name="valider">Valider</string>
+
+    <!-- Page d'accueil (Main) -->
+    <string name="main_text_choixCompte">Choisis un compte :</string>
+    <string name="main_button_sansCompte">Jouer sans compte</string>
+
+    <!-- Page de choix d'un exercice -->
+    <string name="choixExercice_button_additions">Additions</string>
+    <string name="choixExercice_text_choixExercice">choisis un exercice :</string>
+    <string name="choixExercice_textView_bonjour">Bonjour %1$s,</string>
+    <string name="choixExercice_button_soustractions">Soustractions</string>
+    <string name="choixExercice_button_multiplications">Multiplications</string>
+    <string name="choixExercice_button_divisions">Divisions</string>
+    <string name="main_button_creerCompte">Créer un nouveau compte</string>
+
 </resources>

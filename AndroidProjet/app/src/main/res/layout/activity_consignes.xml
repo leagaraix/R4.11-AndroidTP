@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Consignes"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_margin="16dp">
+
+    <!-- TODO : ajouter un bouton ? texte ? cliquable permettant de revenir au choix d'exercice -->
+
+
+
+
+
+    <!-- TODO : ceci devrait être un template de base, à partir duquel on construira la page de consigne de l'exercice choisi -->
+
+
+
+
+
+
+    <TextView
+        android:id="@+id/consignes_textView_exercice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_gravity="center"
+        android:textSize="26sp"/>
+
+
+
+</LinearLayout>
