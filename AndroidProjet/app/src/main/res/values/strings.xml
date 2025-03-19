@@ -7,6 +7,11 @@
     <!-- Page d'accueil (Main) -->
     <string name="main_text_choixCompte">Choisis un compte :</string>
     <string name="main_button_sansCompte">Jouer sans compte</string>
+    <string name="main_button_creerCompte">Créer un nouveau compte</string>
+
+    <!-- Page d'ajout d'un utilisateur -->
+    <string name="addUser_text_nouveauCompte">Nouveau compte</string>
+    <string name="addUser_edit_prenom">Prénom</string>
 
     <!-- Page de choix d'un exercice -->
     <string name="choixExercice_button_additions">Additions</string>
@@ -15,6 +20,7 @@
     <string name="choixExercice_button_soustractions">Soustractions</string>
     <string name="choixExercice_button_multiplications">Multiplications</string>
     <string name="choixExercice_button_divisions">Divisions</string>
-    <string name="main_button_creerCompte">Créer un nouveau compte</string>
+    <string name="addUser_edit_nom">Nom</string>
+    <string name="main_button_creer">Créer</string>
 
 </resources>

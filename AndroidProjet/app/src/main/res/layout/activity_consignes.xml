@@ -8,27 +8,24 @@
     android:gravity="center_vertical"
     android:layout_margin="16dp">
 
-    <!-- TODO : ajouter un bouton ? texte ? cliquable permettant de revenir au choix d'exercice -->
-
-
-
-
-
-    <!-- TODO : ceci devrait être un template de base, à partir duquel on construira la page de consigne de l'exercice choisi -->
-
-
-
-
-
+    <!-- TODO : ajouter un bouton ? texte ? cliquable permettant de revenir au choix d'exercice
+     Le mieux serait d'utiliser include, pour inclure un layout ? MAIS est-ce que ça fonctionnerait avec toutes les activités ?
+     Comment gérer ça avec une activité ? -->
 
     <TextView
-        android:id="@+id/consignes_textView_exercice"
+        android:id="@+id/consignes_textView_nomExercice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="Texte à supprimer"
         android:layout_gravity="center"
         android:textSize="26sp"/>
 
-
+    <TextView
+        android:id="@+id/consignes_textView_consigne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Test de texte qui seront les consignes, très intéressant, très long."
+        android:textSize="20sp"/>
 
 </LinearLayout>

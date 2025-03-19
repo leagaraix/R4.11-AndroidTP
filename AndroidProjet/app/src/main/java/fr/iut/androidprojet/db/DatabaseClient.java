@@ -1,4 +1,4 @@
-package fr.iut2.androidtp.db;
+package fr.iut.androidprojet.db;
 
 
 import android.content.Context;
@@ -51,8 +51,9 @@ public class DatabaseClient {
         public void onCreate(@NonNull SupportSQLiteDatabase db) {
             super.onCreate(db);
 
-            db.execSQL("INSERT INTO user (prenom, nom) VALUES(\"Lea\", \"Garaix\");");
-            db.execSQL("INSERT INTO user (prenom, nom) VALUES(\"Yohan\", \"Brunet-Manquat\");");
+            //
+            db.execSQL("INSERT INTO task (libelle, description) VALUES(\"tâche 1\", \"installer la librairie Room\");");
+            db.execSQL("INSERT INTO task (libelle, description) VALUES(\"tâche 2\", \" Créer DatabaseClient\");");
 
         }
     };
