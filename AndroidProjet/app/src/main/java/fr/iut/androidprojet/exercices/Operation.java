@@ -1,6 +1,11 @@
 package fr.iut.androidprojet.exercices;
 
-public class Operation {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class Operation implements Parcelable {
 
     // Attributs
     private int operande1;
@@ -17,13 +22,49 @@ public class Operation {
         setResultat();
     }
 
+    ///////////////////////////////////////
+    // Gestion Parcelable
+    protected Operation(Parcel in) {
+        operande1 = in.readInt();
+        operande2 = in.readInt();
+        operateur = in.readString();
+        resultat = in.readInt();
+        reponseJoueur = in.readInt();
+    }
+
+    public static final Creator<Operation> CREATOR = new Creator<Operation>() {
+        @Override
+        public Operation createFromParcel(Parcel in) {
+            return new Operation(in);
+        }
+
+        @Override
+        public Operation[] newArray(int size) {
+            return new Operation[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+        dest.writeInt(operande1);
+        dest.writeInt(operande2);
+        dest.writeString(operateur);
+        dest.writeInt(resultat);
+        dest.writeInt(reponseJoueur);
+    }
+    ///////////////////////////////////////
+
     // Setters
     private void setOperande1(int operande1) { this.operande1 = operande1; }
     private void setOperande2(int operande2) { this.operande2 = operande2; }
     private void setOperateur(String operateur) { this.operateur = operateur; }
     private void setResultat() {
-        if (this.operateur.equals("*")) this.resultat = this.operande1 * operande2;
-        if (this.operateur.equals("/")) this.resultat = this.operande1 / operande2; // !!! Est-ce qu'on gère les divisions comme ça ? Ou on demande % ?
+        if (this.operateur.equals("x")) this.resultat = this.operande1 * operande2;
         if (this.operateur.equals("+")) this.resultat = this.operande1 + operande2;
         if (this.operateur.equals("-")) this.resultat = this.operande1 - operande2;
     }
@@ -41,8 +82,8 @@ public class Operation {
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     // Vérifier une réponse de l'utilisateur
-    public boolean reponseJuste() {
-        return reponseJoueur != resultat;
+    public boolean isReponseJuste() {
+        return reponseJoueur == resultat;
     }
 
 }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChoixExercice"
+    tools:context=".ChoixExerciceActivity"
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:layout_margin="16dp">
@@ -50,10 +50,10 @@
         android:textSize="28sp"/>
 
     <Button
-        android:id="@+id/choixExercice_button_divisions"
+        android:id="@+id/choixExercice_button_questionsFrancais"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/choixExercice_button_divisions"
+        android:text="@string/choixExercice_button_questionsFrancais"
         android:textSize="28sp"/>
 
 </LinearLayout>

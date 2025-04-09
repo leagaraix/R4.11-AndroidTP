@@ -12,7 +12,7 @@ public class QuestionReponse {
     // Constructeur
     public QuestionReponse(int idQuestion) {
         // Récupérer la question dans la base de données ?
-        setQuestion();
+        setQuestion("La question est ?");
     }
 
     // Setters
@@ -54,7 +54,7 @@ public class QuestionReponse {
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
     // Vérifier une réponse de l'utilisateur
-    public boolean reponseJuste() {
+    public boolean isReponseJuste() {
         return reponseJoueur.equals(reponseJuste);
     }
 

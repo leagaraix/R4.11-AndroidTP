@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class TableQuestionReponse {
 
-    public static final int MAX = 10; // Nombre de questions -> devrait être tiré de la base de données : combien de questions sont dispo ?
+    public static final int NB_QUESTIONS = 10; // Nombre de questions
 
     // Attributs
     private ArrayList<QuestionReponse> table = new ArrayList<>();
@@ -18,16 +18,10 @@ public class TableQuestionReponse {
         setTable();
     }
 
-
-    // COMMENT ACCEDER A LA BASE DE DONNEES A PARTIR D'ICI ?
-    // EST-CE QUE TOUT SE PASSE DANS LES ACTIVITES ?
-    // EST-CE QU'ON FAIT LES APPELS DANS LE MODELE ?
-
-
     // Setters
     public void setTable() {
-        for (int i = 1; i <= MAX ; i++) {
-            int idQuestion = 1 + (int)(Math.random() * ((MAX - 1) + 1));
+        for (int i = 1; i <= NB_QUESTIONS ; i++) {
+            int idQuestion = 1 + (int)(Math.random() * ((NB_QUESTIONS - 1) + 1));
             table.add(new QuestionReponse(idQuestion));
         }
     }
@@ -45,7 +39,7 @@ public class TableQuestionReponse {
     public int getNbErreurs() {
         int nbErreurs = 0;
         for (QuestionReponse question : table) {
-            if (question.reponseJuste()) {
+            if (question.isReponseJuste()) {
                 nbErreurs++;
             }
         }

@@ -6,21 +6,40 @@
 
     <!-- Page d'accueil (Main) -->
     <string name="main_text_choixCompte">Choisis un compte :</string>
+    <string name="main_textView_recherche">Qui es-tu ?</string>
     <string name="main_button_sansCompte">Jouer sans compte</string>
     <string name="main_button_creerCompte">Créer un nouveau compte</string>
 
     <!-- Page d'ajout d'un utilisateur -->
     <string name="addUser_text_nouveauCompte">Nouveau compte</string>
     <string name="addUser_edit_prenom">Prénom</string>
+    <string name="addUser_edit_nom">Nom</string>
+    <string name="addUser_button_creer">Créer</string>
 
     <!-- Page de choix d'un exercice -->
-    <string name="choixExercice_button_additions">Additions</string>
-    <string name="choixExercice_text_choixExercice">choisis un exercice :</string>
     <string name="choixExercice_textView_bonjour">Bonjour %1$s,</string>
+    <string name="choixExercice_text_choixExercice">choisis un exercice :</string>
+    <string name="choixExercice_button_additions">Additions</string>
     <string name="choixExercice_button_soustractions">Soustractions</string>
     <string name="choixExercice_button_multiplications">Multiplications</string>
     <string name="choixExercice_button_divisions">Divisions</string>
-    <string name="addUser_edit_nom">Nom</string>
-    <string name="main_button_creer">Créer</string>
+
+    <!-- Page de consignes -->
+    <string name="consignes_button_commencer"><![CDATA[Commencer ->]]></string>
+
+    <!-- Page de calcul d'une opération -->
+    <string name="operation_textView_calcul">"%1$d %2$s %3$d = "</string>
+    <string name="operation_editText_hintReponse">\?</string>
+    <string name="operation_button_suivant"><![CDATA[Suivant ->]]></string>
+    <string name="operation_textView_nbOperations">%1$d/%2$d</string>
+
+    <!-- Page d'affichage des résultats -->
+    <string name="resultats_button_recommencer">Réessayer</string>
+    <string name="resultats_button_changerExercice">Changer d\'exercice</string>
+    <string name="resultats_button_continuerExercice">S\'entraîner avec une autre table</string>
+    <string name="resultats_textView_echec">Aïe !\nTon score est de %1$d sur %2$d.</string>
+    <string name="resultats_textView_pasMal">Pas mal !\nTon score est de %1$d sur %2$d.</string>
+    <string name="resultats_textView_reussite">Bravo !\nTon score est de %1$d sur %2$d.</string>
+    <string name="choixExercice_button_questionsFrancais">Français</string>
 
 </resources>

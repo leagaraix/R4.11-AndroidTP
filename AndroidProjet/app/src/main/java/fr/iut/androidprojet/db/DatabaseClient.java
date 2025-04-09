@@ -1,6 +1,5 @@
 package fr.iut.androidprojet.db;
 
-
 import android.content.Context;
 
 import androidx.annotation.NonNull;
@@ -52,8 +51,8 @@ public class DatabaseClient {
             super.onCreate(db);
 
             //
-            db.execSQL("INSERT INTO task (libelle, description) VALUES(\"tâche 1\", \"installer la librairie Room\");");
-            db.execSQL("INSERT INTO task (libelle, description) VALUES(\"tâche 2\", \" Créer DatabaseClient\");");
+            db.execSQL("INSERT INTO user (prenom, nom) VALUES(\"Léa\", \"Garaix\");");
+            db.execSQL("INSERT INTO user (prenom, nom) VALUES(\"Yohan\", \"Brunet-Manquat\");");
 
         }
     };

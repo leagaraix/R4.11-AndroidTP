@@ -2,6 +2,7 @@ package fr.iut.androidprojet;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -15,28 +16,30 @@ import fr.iut.androidprojet.db.User;
 public class AddUserActivity extends AppCompatActivity {
 
     // DATA
-    private DatabaseClient mDB;
+    private DatabaseClient database;
 
     // VIEW
     private EditText editTextPrenomView;
     private EditText editTextNomView;
-    private Button addUserView;
+    private Button btnAddView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_user);
 
-        // Récupération du DatabaseClient
-        mDB = DatabaseClient.getInstance(getApplicationContext());
+        Log.e("DEBUG", "Arrivée sur la page AddUser");
+
+        // Récupérer le DatabaseClient
+        database = DatabaseClient.getInstance(getApplicationContext());
 
         // Récupérer les vues
-        editTextPrenomView = findViewById(R.id.edit_prenom_user);
-        editTextNomView = findViewById(R.id.edit_nom_user);
-        addUserView = findViewById(R.id.button_add_user);
+        editTextPrenomView = findViewById(R.id.addUser_edit_prenom);
+        editTextNomView = findViewById(R.id.addUser_edit_nom);
+        btnAddView = findViewById(R.id.addUser_button_creer);
 
         // Associer un événement au bouton Ajouter
-        addUserView.setOnClickListener(new View.OnClickListener() {
+        btnAddView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { saveUser(); }
         });
@@ -74,7 +77,7 @@ public class AddUserActivity extends AppCompatActivity {
                 user.setNom(sNom);
 
                 // L'ajouter à la BD
-                long id = mDB.getAppDatabase()
+                long id = database.getAppDatabase()
                         .userDao()
                         .insert(user);
 
@@ -93,7 +96,7 @@ public class AddUserActivity extends AppCompatActivity {
                 // Quand l'utilisateur est créé, on arrête l'activité AddUserActivity (on l'enlève de la pile)
                 setResult(RESULT_OK);
                 finish();
-                Toast.makeText(getApplicationContext(), "Utilisateur sauvegardé", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "Utilisateur sauvegardé.", Toast.LENGTH_LONG).show();
             }
 
         }

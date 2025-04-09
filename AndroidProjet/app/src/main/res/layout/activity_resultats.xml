@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:layout_margin="16dp">
+
+    <TextView
+        android:id="@+id/resultats_textView_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Long texte de test"
+        android:layout_marginBottom="10dp"
+        android:textSize="26sp"/>
+
+    <LinearLayout
+        android:id="@+id/resultats_linearLayout_correction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center">
+
+        <!-- Insertion des opérations et de leurs résultats ici -->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/resultats_button_recommencer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/resultats_button_recommencer"/>
+
+    <Button
+        android:id="@+id/resultats_button_continuerExercice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/resultats_button_continuerExercice"/>
+
+    <Button
+        android:id="@+id/resultats_button_changerExercice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/resultats_button_changerExercice"/>
+
+</LinearLayout>

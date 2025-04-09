@@ -11,6 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="@string/addUser_text_nouveauCompte"
         android:layout_gravity="center"
         android:textSize="26sp"/>
@@ -19,20 +20,23 @@
         android:id="@+id/addUser_edit_prenom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:hint="@string/addUser_edit_prenom"/>
 
     <EditText
         android:id="@+id/addUser_edit_nom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:hint="@string/addUser_edit_nom"/>
 
     <Button
         android:id="@+id/addUser_button_creer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:layout_gravity="center"
-        android:text="@string/main_button_creer"
+        android:text="@string/addUser_button_creer"
         android:textSize="15sp"/>
 
 </LinearLayout>

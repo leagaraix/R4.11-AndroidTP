@@ -11,6 +11,8 @@ public class TableDivision {
 
     public static final String OPERATEUR = "/";
     public static final int MAX = 10;
+    public static final String EXERCICE = "Divisions";
+    public static final String CONSIGNES = "Calcule la division.";
 
     // Attributs
     private ArrayList<Operation> table = new ArrayList<>();
@@ -33,6 +35,7 @@ public class TableDivision {
     public ArrayList<Operation> getTable() {
         return table;
     }
+    public String getConsignes() { return CONSIGNES; }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
     // Méthodes
@@ -42,7 +45,7 @@ public class TableDivision {
     public int getNbErreurs() {
         int nbErreurs = 0;
         for (Operation operation : table) {
-            if (operation.reponseJuste()) {
+            if (operation.isReponseJuste()) {
                 nbErreurs++;
             }
         }

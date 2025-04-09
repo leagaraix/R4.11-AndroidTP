@@ -9,38 +9,47 @@
     android:layout_margin="16dp">
     <!-- 16dp est la valeur de marge standard MAIS il faudrait faire en sorte de l'adapter aux plus grand écrans -->
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/main_text_choixCompte"
         android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="@string/main_textView_recherche"
         android:textSize="26sp"/>
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/main_searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <!-- TODO : dans le contrôleur, faire en sorte d'envoyer max 5 users à la fois -->
-    <!-- TODO : si nbUsers == 0, remplacer ListView par TextView "Aucun résultat" et Button "Créer un compte" -->
     <ListView
         android:id="@+id/main_listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="300dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"/>
 
     <Button
         android:id="@+id/main_button_valider"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/valider"/>
+        android:text="@string/valider"
+        android:textSize="15sp"/>
 
     <Button
         android:id="@+id/main_button_anonyme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/main_button_sansCompte"/>
+        android:text="@string/main_button_sansCompte"
+        android:textSize="15sp"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
     <Button
         android:id="@+id/main_button_creerCompte"
